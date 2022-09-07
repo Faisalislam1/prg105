@@ -131,20 +131,15 @@ print("=" * 10, "Section 3.6 boolean variables", "=" * 10)
 tired = True
 hungry = False
 
-
-value = input("Is the baby tired:  ")
-if value == "yes" or value == "Yes":
-    tired = True
+if tired:
     print("Eyes Closed")
 else:
     print("Eyes Open")
 
-values = input("is the baby hungry:  ")
-if values == "yes" or values == "Yes":
-    hungry = True
+if hungry:
     print("Crying")
 else:
-    print("quiet")
+    print("Quiet")
 
 
 
