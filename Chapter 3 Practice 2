@@ -1,0 +1,10 @@
+credit = int(input("What is your credit score?", ))
+print("With a credit score of", credit)
+if 0 <= credit <= 629:
+    print("Your credit score is Bad ")
+if 630 <= credit <= 689:
+    print("Your credit score is Fair ")
+if 690 <= credit <= 719:
+    print("Your credit score is Good")
+if 720 <= credit <= 850:
+    print("Your credit score is Excellent")
