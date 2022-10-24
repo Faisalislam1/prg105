@@ -57,12 +57,12 @@ print("=" * 10, "Section 6.2 use loops to process files", "=" * 10)
 states_file = open('states.txt', 'r')
 
 counter = 0
-while states_file != "":
+for line in states_file:
     line = states_file.readline()
     print(line)
     counter = counter+1
 
-
+print(counter)
 # 2) Write a for loop to read in all of the lines,
 # -- print each line on the screen,
 # -- also add 1 to counter for each line
@@ -76,21 +76,35 @@ books = 3      # use this as the number of books to enter
 
 # 1) open the file books.txt for writing, using the variable books_file
 # Remove the """ """ to test
-"""books_file = """
+books_file = open('books', 'w')
 
 # 2) Use a for loop to get a title and author from the user using a range of 1, books + 1
 # -- get the data from the user in the loop
 # -- write the data to the file as a record while in the loop,
 #    make sure to include the \n at the end of the line
-    
-# 3) Close the file
 
+for books in range(1,books+1):
+    word = input(("Please enter a the title of the bookand name of the author\n"))
+    books_file.write(word)
+    books_file.write("\n")
+
+# 3) Close the file
+books_file.close()
 # TODO 6.4 Exceptions
 print("=" * 10, "Section 6.4 exceptions", "=" * 10)
 # In this exercise you will try to open a file that does not exist,
 # capture the error, and display a custom error message
 
 # 1) Create a try statement
+try:
+    superhero = open("superheros.txt", "r")
+
+except FileNotFoundError:
+    superhero = open("superheros.txt", "w")
+    superhero.close()
+    print("File Created")
+except IOError:
+    print("File doesn't exist")
 
 # 2) Open the file superheros.txt for READING (we are not writing, it would create the file)
 
