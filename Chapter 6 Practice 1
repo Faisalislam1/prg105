@@ -1,0 +1,12 @@
+people = int (input("How many people would you like to add to the file?"))
+contact = open('Contact.txt', 'w')
+counter = 0
+while people != counter:
+    counter += 1 
+    name = input(("What is the name of the person?"))
+    contact.write(f"{name},")
+    number = input(("Whats their phone number?"))
+    contact.write(f"{number},")
+    email = input(("Whats is their email adress?"))
+    contact.write(f"{email}")
+    contact.write('\n')
