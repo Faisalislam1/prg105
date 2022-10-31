@@ -11,38 +11,41 @@
 print("=" * 10, "Section 7.2 lists", "=" * 10)
 # 1) Create a list of days of the week, assign it to the variable days, remove """ """ to test
 
-"""
-days =
-"""
+
+days = ['Monday', 'Tuesday', 'Wednessday', 'Thurdays', 'Friday', 'Saturday', 'Sunday']
+
 
 # 2) Create a list with 5 items, set them all to 0, use the Repetition Operator ( * )
-
+ROlist = [0]*5
 # 3) Print the contents of your days list using the for operator
-
+for line in days:
+    print(days)
 # 4) Print the list item that holds the value Saturday from the days list by using its index
-
+print(days[5:6])
 # 5) Create a variable called size to hold the length of the list days using the len function
-
+size = len(days)
+print(size)
 # 6) Concatenate the two following lists together, storing the value in list3 - remove the """ """ to test
 
-"""
+
 list1 = [1, 3, 5, 7, 9]
 list2 = [2, 4, 6, 8, 10]
-list3 =
+list3 = [list1 + list2]
 print(list3)
-"""
+
 
 # TODO 7.3 List Slicing
 print("=" * 10, "Section 7.3 list slicing", "=" * 10)
 # Slice the list days to select from Monday through Friday, inclusive, and assign the new list to work_days
 # Print work_days
-
+work_days = days[0:5]
+print(work_days)
 
 # TODO 7.4 Finding items in Lists with the in Operator
 print("=" * 10, "Section 7.4 using the in operator", "=" * 10)
 # Use the in operator to determine whether "Tue" is in the list days
 # Based on the result, display "yes, Tue is in the list" or "no, Tue is not in the list"
-
+for 
 
 # TODO 7.5 List Methods and Useful Built-in Functions
 print("=" * 10, "Section 7.5 list methods and functions", "=" * 10)
