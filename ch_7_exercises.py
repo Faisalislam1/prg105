@@ -86,13 +86,16 @@ counter = 0
 for value in list3:
     total += value
     counter += 1
+print(total)
 # 2) Get the average of values in list3 and print the results
 aver = total / counter
+print(f'{aver:,.2f}')
 # 3) Open the file states.txt in read mode,
 # -- read the contents of the file into the list states_list
 # -- print the contents of states_list on screen
-
-
+states = open("states.txt",'r')
+for line in states:
+        print(line.strip("\n"))
 # TODO 7.8 List Comprehensions
 print("=" * 10, "Section 7.8 list comprehensions", "=" * 10)
 # Use list comprehension to create a new list whose values are the squares of my_list's values
@@ -106,12 +109,17 @@ print("=" * 10, "Section 7.9 two-dimensional lists", "=" * 10)
 #     the outer list should have twelve elements, one for each month
 #     the element for each month should be a list holding the month name and number of days
 #     So, days_in_month[0][0] is January and days_in_month[0][1] is 31
-days_in_month =[['Jan','Fire']['Feb','Earth']['Mar','Air']['Water']['Aries']['Taurus']['Ge']['']['']['']['']['']]
+days_in_month =[['Aries',31],['Taurus', 28],['Gemini', 31],['Cancer',29],['Leo',31],['Virgo',30],['Libra',29],['Scorpio',31],['Sagittarius',30],['Capricorn', 31],['Aquarius', 30],['Pisces', 30]]
 # 2) Print the contents of the entire list
+for i in days_in_month:
+    print(i)
+
 
 # 3) Print just the values for index 3,0 and 3,1
-
+print(days_in_month[3][0])
+print(days_in_month[3][1])
 # TODO 7.10 Tuples
 print("=" * 10, "Section 7.10 tuples", "=" * 10)
 # Create a tuple using the months list as its data source
-#my_tuples = months(my_turple)
+my_tuples = months
+print(my_tuples)
