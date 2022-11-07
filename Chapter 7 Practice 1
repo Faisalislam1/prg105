@@ -1,0 +1,13 @@
+students = int(input("How Many Students do you need to enter grades for?"))
+i =0
+studentlist = []
+output = open("grades.txt",'w')
+while i < students:
+
+    Name = input(f"Enter the name of student {i+1}:")
+    Grade = input(f"Enter the grade for the student{i+1}:")
+    studentlist.append([Name,Grade])
+    output.write(f"'{Name}','{Grade}'\n")
+    i+=1
+
+print(studentlist)
