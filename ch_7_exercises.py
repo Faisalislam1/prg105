@@ -21,7 +21,7 @@ Olist = [0]*5
 for days in week:
     print(days)
 # 4) Print the list item that holds the value Saturday from the days list by using its index
-print(week[5:6])
+print(week[5])
 # 5) Create a variable called size to hold the length of the list days using the len function
 size = len(week)
 print(size)
@@ -101,8 +101,8 @@ print("=" * 10, "Section 7.8 list comprehensions", "=" * 10)
 # Use list comprehension to create a new list whose values are the squares of my_list's values
 # display the new list
 my_list = [1, 5, 7, 22, 37, 90]
-
-
+new_list = [n*n for n in my_list]
+print(new_list)
 # TODO 7.9 Two-Dimensional Lists
 print("=" * 10, "Section 7.9 two-dimensional lists", "=" * 10)
 # 1) Create a new two-dimensional list named days_in_month
@@ -111,8 +111,7 @@ print("=" * 10, "Section 7.9 two-dimensional lists", "=" * 10)
 #     So, days_in_month[0][0] is January and days_in_month[0][1] is 31
 days_in_month =[['Aries',31],['Taurus', 28],['Gemini', 31],['Cancer',29],['Leo',31],['Virgo',30],['Libra',29],['Scorpio',31],['Sagittarius',30],['Capricorn', 31],['Aquarius', 30],['Pisces', 30]]
 # 2) Print the contents of the entire list
-for i in days_in_month:
-    print(i)
+print(days_in_month)
 
 
 # 3) Print just the values for index 3,0 and 3,1
@@ -121,5 +120,5 @@ print(days_in_month[3][1])
 # TODO 7.10 Tuples
 print("=" * 10, "Section 7.10 tuples", "=" * 10)
 # Create a tuple using the months list as its data source
-my_tuples = months
-print(my_tuples)
+str_tuple = tuple(months)
+print(str_tuple)
