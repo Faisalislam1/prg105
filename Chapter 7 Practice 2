@@ -1,0 +1,21 @@
+#Create the parallel arrays as instructed.
+#Ask the user for a secret phrase.
+#Initialize an empty array to hold the encoded results.
+#Use a for loop to iterate through each character in the given phrase.
+#Find the character in the alpha array. Use the corresponding subscript to access the encoded character in the code array. Append the encoded character into a third array.
+#Display the resulting array on screen.
+phrase = list(input("Enter the phrase you would like to be encoded"))
+ec_array = []
+num = len(phrase)
+zero = 0
+nu = num
+n = 0
+code = open("encoded.txt", "w")
+list1 = ["!", ",", ".", " ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+list2 = [] + list1
+list2.reverse()
+
+for counter in phrase:
+    n = list1.index(counter)
+    code.write(list2[n])
+    print (list2[n].strip("\n"))
