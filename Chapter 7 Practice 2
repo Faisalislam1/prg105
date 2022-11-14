@@ -14,8 +14,16 @@ code = open("encoded.txt", "w")
 list1 = ["!", ",", ".", " ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 list2 = [] + list1
 list2.reverse()
+list3 = []
 
 for counter in phrase:
     n = list1.index(counter)
     code.write(list2[n])
-    print (list2[n].strip("\n"))
+    code.write('\n')
+    list3 += list2[n]
+
+code.close()
+code = open('encoded.txt','r')
+
+print(list3)
+
