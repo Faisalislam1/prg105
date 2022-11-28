@@ -1,0 +1,9 @@
+print("This program accepts a phrase and returns the acronym.")
+string = str(input(("Please enter a phrase to convert: ")))
+word_list = string.split()
+a = ""
+counter = 0
+for i in word_list:
+
+    a += i[0]
+print(f"{a.upper()}")
